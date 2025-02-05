@@ -2,11 +2,25 @@
 
 WanderAsia is a web-based tourism platform focused on helping travelers explore destinations across Asia. This repository contains the client-side code of the WanderAsia project.
 
+## About
+WanderAsia provides a seamless experience for travelers looking to explore Asia. Our platform offers in-depth insights into top destinations, cultural experiences, and travel tips to make every journey memorable. We aim to connect travelers with authentic experiences through curated guides, user reviews, and interactive maps. 
+
+### Live Website
+Visit our live website here: [WanderAsia Live](https://wanderasia-41bae.web.app/)
+
+### Why WanderAsia?
+- **Comprehensive Destination Coverage**: Discover hidden gems and popular attractions across Asia.
+- **User-Generated Reviews**: Get insights from real travelers who share their experiences.
+- **Interactive Maps**: Navigate easily with integrated maps displaying key locations.
+- **Personalized Recommendations**: Tailored suggestions based on user preferences and past activities.
+
 ## Features
 - Browse and search for tourist destinations across Asia
 - View detailed information about destinations, including images and descriptions
 - User authentication (signup/login)
 - User reviews and ratings for destinations
+- Interactive maps for easy navigation
+- Personalized travel suggestions
 - Responsive design for seamless experience across devices
 
 ## Tech Stack
