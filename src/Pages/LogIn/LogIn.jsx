@@ -83,7 +83,7 @@ const LogIn = () => {
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center px-4 bg-base-200">
+        <div className="min-h-screen center flex items-center justify-center px-4 bg-base-200">
             <div className="flex flex-col lg:flex-row items-center justify-center w-full max-w-5xl gap-6">
                 {/* Left Side (Illustration Placeholder) */}
                 <div className="hidden lg:block w-full lg:w-1/2">
@@ -92,7 +92,7 @@ const LogIn = () => {
                 </div>
 
                 {/* Right Side (Form) */}
-                <div className="card bg-base-100 p-6 w-full max-w-md shadow-2xl">
+                <div className="card bg-base-100 justify-center  p-6 w-full max-w-md shadow-2xl">
                     <h1 className="text-3xl text-center font-bold mb-4">Login</h1>
                     <form className="card-body space-y-4" onSubmit={handleLogIn}>
                         {/* Email Field */}

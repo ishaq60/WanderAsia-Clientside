@@ -1,14 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const CountryDetails = ({ data }) => {
 
   const { country, countryImage, shortDescription, _id, visitorsPerYear } =
     data;
+    
+    useEffect(() => {
+      AOS.init({
+        duration: 1000, // Animation duration in milliseconds
+        // Whether animation should happen only once
+        easing: "ease-in-out", // Animation easing
+      });
+    }, []);
   return (
     <Link to={`/country/${country}`}>
-      <div className="mt-5">
-        <div className="max-w-xl mt-4 bg-white rounded-2xl shadow-sm border  overflow-hidden">
+      <div  className="mt-5">
+        <div data-aos="zoom-in" className="max-w-xl mt-4 bg-white rounded-2xl shadow-sm border  overflow-hidden">
           <img
             className="w-full h-48 object-cover"
             src={countryImage} // Replace with actual image URL

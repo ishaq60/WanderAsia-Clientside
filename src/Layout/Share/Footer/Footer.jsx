@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -14,15 +15,15 @@ const Footer = () => {
                 href="#"
                 aria-label="Brand"
               >
-                Brand
+         WanderAsia
               </a>
             </div>
 
             {/* Product Section */}
             <div className="col-span-1">
-              <h4 className="font-semibold text-gray-100">Product</h4>
+         <Link to='/'>     <h4 className="font-semibold text-gray-100">Home</h4></Link>
               <div className="mt-3 grid space-y-3">
-                {["Pricing", "Changelog", "Docs"].map((item, index) => (
+                {["Add tourist spot", "Changelog", "Docs"].map((item, index) => (
                   <p key={index}>
                     <a
                       className="text-gray-400 hover:text-gray-200 focus:outline-none focus:text-gray-200"
@@ -37,7 +38,7 @@ const Footer = () => {
 
             {/* Company Section */}
             <div className="col-span-1">
-              <h4 className="font-semibold text-gray-100">Company</h4>
+              <h4 className="font-semibold text-gray-100">Add Tourist Spot</h4>
               <div className="mt-3 grid space-y-3">
                 {["About us", "Blog", "Customers"].map((item, index) => (
                   <p key={index}>
@@ -75,7 +76,7 @@ const Footer = () => {
                   />
                   <button
                     type="submit"
-                    className="w-full sm:w-auto p-3 text-sm font-medium rounded-lg bg-blue-600 text-white hover:bg-blue-700 focus:outline-none"
+                    className="w-full sm:w-auto p-3 text-sm font-medium rounded-lg btn btn-success text-white hover:bg-blue-700 focus:outline-none"
                   >
                     Subscribe
                   </button>
@@ -90,7 +91,7 @@ const Footer = () => {
           {/* Bottom Section */}
           <div className="mt-5 sm:mt-12 flex flex-col sm:flex-row justify-between items-center">
             <p className="text-sm text-gray-400 dark:text-neutral-400">
-              © {new Date().getFullYear()} Preline Labs.
+              © {new Date().getFullYear()} WanderAsia Group
             </p>
 
             {/* Social Media Icons */}

@@ -60,7 +60,7 @@ const AddTouristSpot = () => {
         });
     }
     return (
-        <div className="bg-base-200 w-full min-h-screen flex items-center justify-center p-4">
+        <div className="bg-base-200 w-full h-[700px] flex items-center justify-center p-4">
             <div className="bg-base-100 w-full max-w-4xl shadow-md rounded-lg p-6 sm:p-8">
                 <div className="text-center mb-6">
                     <h1 className="text-2xl sm:text-3xl font-bold">Add New Tourist Spot</h1>

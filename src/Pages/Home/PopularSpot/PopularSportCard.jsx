@@ -1,12 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const PopularSportCard = ({ data }) => {
   const { PhotoUrl, spot, location, country, _id, season, username, cost } =
     data;
+
+    useEffect(() => {
+      AOS.init({
+        duration: 1000, // Animation duration in milliseconds
+        // Whether animation should happen only once
+        easing: "ease-in-out", // Animation easing
+      });
+    }, []);
   return (
     <div className="mt-5">
-      <div className="max-w-xl mt-4 bg-white rounded-2xl shadow-sm border  overflow-hidden">
+      <div data-aos="fade-up" className="max-w-xl mt-4  bg-white rounded-2xl shadow-sm border  overflow-hidden">
         <img
           className="w-full h-48 object-cover"
           src={PhotoUrl} // Replace with actual image URL

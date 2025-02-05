@@ -3,6 +3,8 @@ import PopularSportCard from "./PopularSportCard";
 import { Link } from "react-router-dom";
 import AllTouristSpot from "../../AllTouristSport/AllTouristSpot";
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const PopularSport = () => {
   const [tourdata, settourdata] = useState([]);
   const [datalength, setdatalength] = useState(6); // Show 3 tours by default
@@ -15,11 +17,19 @@ const PopularSport = () => {
         settourdata(data);
       });
   }, []);
+  useEffect(() => {
+    AOS.init({
+      duration: 2000, // Animation duration in milliseconds
+      // Whether animation should happen only once
+      easing: "ease-in-out", // Animation easing
+    });
+  }, []);
+
 
   return (
-    <div className="mt-12 max-w-7xl mx-auto px-4">
+    <div data-aos="feed up" className="mt-12 max-w-7xl mx-auto px-4">
       {/* Title Section */}
-      <div className="md:flex justify-between items-center mt-10">
+      <div data-aos="fade-up" className="md:flex justify-between  items-center mt-10">
         <div className="md:w-2/3">
           <p className="text-green-700 text-lg">Perfect for You</p>
           <p className="font-bold text-4xl">Popular Tour Packages</p>
@@ -33,7 +43,8 @@ const PopularSport = () => {
       </div>
 
       {/* Grid Layout for Tour Cards */}
-      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+      <div data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom" className="grid sm:grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-8 mt-10">
         {tourdata.length > 0 ? (
           tourdata.slice(0, datalength).map((data) => (
             <AllTouristSpot data={data} key={data._id}></AllTouristSpot>,  <PopularSportCard key={data._id} data={data} />

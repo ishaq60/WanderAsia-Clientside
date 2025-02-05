@@ -78,7 +78,7 @@ const handaleUpdated=id=>{
 
 
   return (
-    <div className="mt-10 max-w-7xl mx-auto px-4">
+    <div className="mt-10 max-w-7xl  h-[700px] mx-auto px-4">
       <h1 className="text-center font-bold text-4xl mb-6">My Tourist Spots</h1>
 
       {error && <div className="text-center text-red-500 mb-4">{error}</div>} {/* Display error message if any */}
